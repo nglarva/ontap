@@ -1,5 +1,7 @@
-// Kiểm tra số nguyên tố
 #include <stdio.h>
+/*
+// Kiểm tra số nguyên tố
+
 #include <stdbool.h>
 #include <math.h>
 
@@ -31,11 +33,7 @@ void kiemTraSNT(int n){
     }
 }
 
-
-int main()
-{
-    int n  = 67;
-
+int kiemTraSNT2(int n){
     if (n < 2)
     {
         printf("%d khong phai la so nguyen to\n",n);
@@ -51,6 +49,22 @@ int main()
             }
         }
     }
-    printf("%d la so nguyen to\n",n);    
+    printf("%d la so nguyen to\n",n);
+    return 1;    
+
+}*/
+int main(){
+    int n, sum=0;
+    printf("nhap so nguyen :");
+    scanf("%d", &n);
+    // while (n>0){
+    //     sum += n % 10;
+    //     n = n / 10;
+    // }
+    for(;n > 0;n /= 10){
+        printf("%d\n", n);
+        sum += n % 10;
+    }
+    printf("tong %d\n", sum);
     return 0;
 }
