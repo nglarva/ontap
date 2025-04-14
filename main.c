@@ -53,8 +53,8 @@ int kiemTraSNT2(int n){
     return 1;    
 
 }*/
-int main(){
-    int n, sum=0;
+void tinhTongCS(int n){
+    int sum=0;
     printf("nhap so nguyen :");
     scanf("%d", &n);
     // while (n>0){
@@ -66,5 +66,10 @@ int main(){
         sum += n % 10;
     }
     printf("tong %d\n", sum);
+
+}
+int main(){
+    
+    
     return 0;
 }
