@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 /*
 // Kiểm tra số nguyên tố
 
@@ -69,7 +70,13 @@ void tinhTongCS(int n){
 
 }
 int main(){
-    
+    char str[] = "   Hello";
+    int i = 0;
+    for(int i = 0; i< strlen(str);i++){
+        if(str[0] == 32){
+            str[i] = str[i+1];
+        }
+    }
     
     return 0;
 }
