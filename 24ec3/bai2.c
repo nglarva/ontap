@@ -91,13 +91,14 @@ void xoaKTDauCuoi(){
     }
     printf("so ki tu viet hoa: %d",upcount);
 }
+
 typedef struct SinhVien{
     int MaSV;
     char HoTen[30];
     float DiemTB;
     } SV; //alias
 
-int main(void){
+void XulyStruct(){
     int n;
     
     SV sv1={1,"Manh Hung",4.5};
@@ -141,4 +142,23 @@ for(int i= 0; i<n; i++){
     }
     
 }
+}
+int main(void){
+    
+    FILE * file_pointer;
+    int n;
+    int arr[100];
+
+    file_pointer = fopen("numbers.txt","w");
+    
+    printf("Nhap n: ");
+    scanf("%d",&n);
+    
+    for(int i = 0;i < n;i++){
+        printf("Nhap gia tri %d: \n",i);
+        scanf("%d", &arr[i]);
+        fprintf(file_pointer,"%d ",arr[i]);
+    }
+    
+    fclose(file_pointer);
 }
