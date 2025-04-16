@@ -134,8 +134,11 @@ for(int i = 0; i < n; i++){
     printf("Nhap diem trung binh: ");
     scanf("%f", &dsSV[i].DiemTB);
 }
-printf("Danh sach sinh vien\n");
+printf("Danh sach sinh vien co diem > 5.0\n");
 for(int i= 0; i<n; i++){
-    printf("%d, %s, %f\n", dsSV[i].MaSV, dsSV[i].HoTen, dsSV[i].DiemTB);
+    if(dsSV[i].DiemTB > 5.0){
+        printf("%d, %s, %f\n", dsSV[i].MaSV, dsSV[i].HoTen, dsSV[i].DiemTB);
+    }
+    
 }
 }
